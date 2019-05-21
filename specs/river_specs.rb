@@ -31,4 +31,15 @@ class RiverTests < Minitest::Test
     assert_equal(3,fish_in_river)
   end
 
+  def test_fish_count__initial
+    river1 = River.new('Amazon',@fish_array)
+    assert_equal(4, river1.fish_count)
+  end
+
+  def test_fish_count__one_removed
+    river1 = River.new('Amazon',@fish_array)
+    river1.remove_fish(@fish3)
+    assert_equal(3, river1.fish_count)
+  end
+
 end

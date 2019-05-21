@@ -11,6 +11,9 @@ attr_reader :name, :fish_stock
     @fish_stock.delete(fish)
   end
 
+  def fish_count
+    return @fish_stock.count
+  end
 
 end
 
